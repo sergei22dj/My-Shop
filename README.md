@@ -1,4 +1,4 @@
-## Cultum Front-end Starter Kit
+## Cultum Front-end Starter Kit S (for test tasks)
 
 > Basic project structure organizations and start point for a new project
 
