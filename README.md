@@ -6,7 +6,7 @@
 
 ~ Clone project into your local projects folder:
 
-`git clone git@gitlab.com:Venumteam/cultum-fe-starter-kit.git`
+`git clone git@gitlab.com:cultum/cultum-fe-starter-kit-s.git`
 
 ~ Open cloned project in the `IDE`
 
