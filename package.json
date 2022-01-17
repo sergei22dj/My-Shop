@@ -21,30 +21,30 @@
     ]
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.20",
-    "next": "10.0.7",
+    "next": "12.0.8",
     "normalize.css": "^8.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^14.14.31",
+    "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
+    "@types/styled-components": "^5.1.20",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^5.1.1",
-    "lint-staged": "^10.5.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   }
