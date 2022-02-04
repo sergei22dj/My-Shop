@@ -5,9 +5,17 @@ import Link from 'next/link';
 const Logo = () => (
   <Link href='/' passHref>
     <a>
-      <img src='/static/logos/SW-Logo.png' alt='sw-logo' />
+      <img src='/static/logos/logo.png' width='70px' height='70px' alt='dollar-logo' />
     </a>
   </Link>
 );
 
-export { Logo };
+const BackImg = () => (
+  <Link href='/products' passHref>
+    <a>
+      <img src='/static/logos/left-arrow.png' width='70px' height='70px' alt='dollar-logo' />
+    </a>
+  </Link>
+);
+
+export { Logo, BackImg };

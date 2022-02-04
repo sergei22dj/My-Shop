@@ -1,66 +1,52 @@
-export interface Person {
+export interface Product {
   name: string;
   id: string;
-  hair_color: string;
-  skin_color: string;
-  gender: string;
-  eye_color: string;
-  birth_year: string;
+  description: string;
+  price: number;
+  url: string;
 }
 
-export const people: Person[] = [
+export const products: Product[] = [
   {
-    name: 'Ben Kenobi',
+    name: 'Kenwood GTR RX-15',
     id: '1',
-    hair_color: 'blond',
-    skin_color: 'fair',
-    gender: 'male',
-    eye_color: 'blue',
-    birth_year: '19BBY'
+    description: 'дуже классная хлебопечка',
+    price: 189,
+    url: '/static/images/breadMaker1.jpg'
   },
   {
-    name: 'Luke Skywalker',
+    name: 'Samsung Pro Max RX-15',
     id: '2',
-    hair_color: 'gold',
-    skin_color: 'yellow',
-    gender: 'male',
-    eye_color: 'yellow',
-    birth_year: '112BBY'
+    description: 'классная хлебопечка',
+    price: 119,
+    url: '/static/images/breadMaker2.jpg'
   },
   {
-    name: 'R2-D2',
+    name: 'Samsung Pro GTR',
     id: '3',
-    hair_color: 'red',
-    skin_color: 'white',
-    gender: 'n/a',
-    eye_color: 'red',
-    birth_year: '33BBY'
+    description: 'очень классная хлебопечка',
+    price: 539,
+    url: '/static/images/breadMaker3.jpg'
   },
   {
-    name: 'Darth Vader',
+    name: 'Samsung Pro GTR RX-15',
     id: '4',
-    hair_color: 'brown',
-    skin_color: 'light',
-    gender: 'female',
-    eye_color: 'yellow',
-    birth_year: '41.9BBY'
+    description: 'очень классная хлебопечка',
+    price: 149,
+    url: '/static/images/breadMaker4.jpg'
   },
   {
-    name: 'Leia Organa',
+    name: 'Samsung Pro GTR RX-15',
     id: '5',
-    hair_color: 'brown',
-    skin_color: 'light',
-    gender: 'female',
-    eye_color: 'brown',
-    birth_year: '19BBY'
+    description: 'очень классная хлебопечка',
+    price: 1119,
+    url: '/static/images/breadMaker5.jpg'
   },
   {
-    name: 'Owen Lars',
+    name: 'Mega Pro GTR RX-15',
     id: '6',
-    hair_color: 'blond',
-    skin_color: 'light',
-    gender: 'female',
-    eye_color: 'blue',
-    birth_year: '52BBY'
+    description: 'очень классная хлебопечка',
+    price: 149,
+    url: '/static/images/breadMaker6.jpg'
   }
 ];

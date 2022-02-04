@@ -25,14 +25,14 @@
       "@md-styles/*": [
         "./modules/shared/styles/*"
       ],
-      "@md-star-wars/*": [
-        "./modules/star-wars/*"
+      "@md-shop-items/*": [
+        "./modules/shop-items/*"
       ],
-      "@md-sw-people/*": [
-        "./modules/star-wars/people/*"
+      "@md-si-products/*": [
+        "./modules/shop-items/products/*"
       ],
-      "@md-sw-person/*": [
-        "./modules/star-wars/person/*"
+      "@md-si-product/*": [
+        "./modules/shop-items/product/*"
       ],
       "@md-ui/*": [
         "./modules/shared/components/ui/*"
