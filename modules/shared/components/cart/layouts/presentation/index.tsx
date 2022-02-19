@@ -95,28 +95,29 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ onBackdropClick, modalVsion
       description={el.description}
     />
   ));
+  if (productList.length) {
+    return (
+      <Modal onBackdropClick={onBackdropClick}>
+        <DesktopModalContainer>
+          <HeaderModal>
+            <CloseDesktop onClick={onBackdropClick}>
+              <CloseSign>X</CloseSign>
+            </CloseDesktop>
+            {header}
+          </HeaderModal>
 
-  return (
-    <Modal onBackdropClick={onBackdropClick}>
-      <DesktopModalContainer>
-        <HeaderModal>
-          <CloseDesktop onClick={onBackdropClick}>
-            <CloseSign>X</CloseSign>
-          </CloseDesktop>
-          {header}
-        </HeaderModal>
+          <ProductsWrapper>{products}</ProductsWrapper>
 
-        <ProductsWrapper>{productList.length ? products : 'Cart is empty'}</ProductsWrapper>
-
-        {productList.length && (
           <ButtonBar>
             <ActionButton>Continue Sopping</ActionButton>
             <ActionButton>Pay: {numberWithCommas(totalPrice)} $</ActionButton>
           </ButtonBar>
-        )}
-      </DesktopModalContainer>
-    </Modal>
-  );
+        </DesktopModalContainer>
+      </Modal>
+    );
+  } else {
+    return <></>;
+  }
 };
 
 export default ModalWrapper;
