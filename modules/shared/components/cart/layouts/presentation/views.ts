@@ -52,6 +52,9 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
   border: 1px solid white;
 `;
 
@@ -78,7 +81,6 @@ export const NameWrapper = styled.div`
 `;
 
 export const ProductsWrapper = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.white};
   margin: 60px 0;
   color: ${({ theme }) => theme.colors.white};
 `;
@@ -86,6 +88,11 @@ export const ProductsWrapper = styled.div`
 export const ButtonsCard = styled.div`
   font-size: 24px;
   color: white;
+  display: flex;
+  font-size: 24px;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 export const ActionButton = styled.button`

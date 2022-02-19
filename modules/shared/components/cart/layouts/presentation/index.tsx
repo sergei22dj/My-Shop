@@ -1,10 +1,12 @@
 import React from 'react';
 // context
-import { CardContext } from '@md-modules/shared/Contexts/cart';
+import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
 // types
 import { Product } from '@md-modules/shared/mock';
+// assist
+import { numberWithCommas } from '../../assistants';
 // components
-import Modal from './Modal';
+import Modal from '../../modalPopUp/Modal';
 import { ViewButton } from '@md-modules/shop-items/products/compoonents/card/views';
 // views
 import {
@@ -22,10 +24,6 @@ import {
   CloseSign,
   CloseDesktop
 } from './views';
-
-function numberWithCommas(x: number) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-}
 
 interface ModalWrapperProps {
   onBackdropClick: () => void;
@@ -81,9 +79,8 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ onBackdropClick, modalVsion
   }
   const incrementItem = (id: string) =>
     setCardProducts(productList.map((item) => (item.id === id ? { ...item, count: item.count + 1 } : item)));
-  const decrementItem = (id: string) => {
+  const decrementItem = (id: string) =>
     setCardProducts(productList.map((item) => (item.id === id ? { ...item, count: item.count - 1 } : item)));
-  };
 
   const products = productList.map((el, index) => (
     <ProductCard

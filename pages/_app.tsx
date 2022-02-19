@@ -7,7 +7,7 @@ import { theme } from '@md-styles/styled/theme';
 import { GlobalStyles } from '@md-styles/styled/global';
 // global css
 import 'normalize.css/normalize.css';
-import CardContextProvider from '@md-modules/shared/Contexts/cart';
+import CardContextProvider from '@md-modules/shared/components/cart/layouts/bussines';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>

@@ -2,7 +2,7 @@ import * as React from 'react';
 // context
 import { ProductAPIContext } from '../api/product';
 import { ProductBLContext } from '../business';
-import { CardContext } from '@md-modules/shared/Contexts/cart';
+import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
 // view components
 import { ContentLoader } from '@md-ui/loaders/content-loader';
 import { ProductInfo } from '../../components/product-info';
@@ -22,16 +22,7 @@ import { BackImg } from '@md-modules/shared/components/ui/logos/main';
 
 import { ViewButton } from '@md-modules/shop-items/products/compoonents/card/views';
 
-interface Props {
-  id: string;
-  name: string;
-  url: string;
-  price: number;
-  count?: number;
-  description: string;
-}
-
-const ProductPresentation: React.FC<Props> = () => {
+const ProductPresentation = () => {
   const { isLoading, product } = React.useContext(ProductAPIContext);
   const { productInfo, productImgUrl } = React.useContext(ProductBLContext);
   const { setCardProduct, productList, setCardProducts } = React.useContext(CardContext);

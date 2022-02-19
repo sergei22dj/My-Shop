@@ -1,6 +1,6 @@
 import * as React from 'react';
 // context
-import { CardContext } from '@md-modules/shared/Contexts/cart';
+import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
 // views
 import { CardWrapper, CardImgWrapper, CardImg, CardFooter, CardFooterTitle, ViewButton, CardName } from './views';
 // view components
