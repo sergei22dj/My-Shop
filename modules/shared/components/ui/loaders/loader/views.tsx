@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 48px;
-  height: 48px;
+  width: 150px;
+  height: 150px;
   margin: auto;
   position: relative;
 `;
@@ -20,10 +20,10 @@ export const Circle = styled.div<{ index?: number }>`
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: ${({ theme }) => theme.colors.green300};
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 100%;
-    -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
-    animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+    -webkit-animation: sk-circleBounceDelay 2s infinite ease-in-out both;
+    animation: sk-circleBounceDelay 1s infinite ease-in-out both;
 
     ${({ index }) => {
       switch (index) {

@@ -32,7 +32,6 @@ const MenuItem: React.FC<Props> = ({ href, label }) => (
     <Link href={href} passHref>
       <a>{label}</a>
     </Link>
-    <img src='/static/images/cart.png' width='50px' height='50px' alt='cart-img' />
   </MenuI>
 );
 

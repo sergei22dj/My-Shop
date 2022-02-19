@@ -4,13 +4,11 @@ import { ProductsBLContextProvider } from './layers/business';
 import { ProductsPresentation } from './layers/presentation';
 
 const ProductsContainer = () => (
-  <>
-    <ProductsAPIContextProvider>
-      <ProductsBLContextProvider>
-        <ProductsPresentation />
-      </ProductsBLContextProvider>
-    </ProductsAPIContextProvider>
-  </>
+  <ProductsAPIContextProvider>
+    <ProductsBLContextProvider>
+      <ProductsPresentation />
+    </ProductsBLContextProvider>
+  </ProductsAPIContextProvider>
 );
 
 export { ProductsContainer };

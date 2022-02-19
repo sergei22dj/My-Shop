@@ -4,49 +4,81 @@ export interface Product {
   description: string;
   price: number;
   url: string;
+  count: number;
 }
 
 export const products: Product[] = [
   {
-    name: 'Kenwood GTR RX-15',
+    name: 'Mi Robot Vacuum-Mop 2',
     id: '1',
-    description: 'дуже классная хлебопечка',
-    price: 189,
-    url: '/static/images/breadMaker1.jpg'
+    description: 'Сухая и влажная уборка одним движением одновременно. Убедитесь сами! ',
+    price: 449,
+    url: '/static/images/robot.jpg',
+    count: 1
   },
   {
-    name: 'Samsung Pro Max RX-15',
+    name: 'Mediclin S100 Black',
     id: '2',
-    description: 'классная хлебопечка',
-    price: 119,
-    url: '/static/images/breadMaker2.jpg'
+    description: 'Зубная щетка защищена от воды по стандарту IPX7',
+    price: 79,
+    url: '/static/images/Toothbrush.jpg',
+    count: 1
   },
   {
-    name: 'Samsung Pro GTR',
+    name: 'Samsung RT38K54',
     id: '3',
-    description: 'очень классная хлебопечка',
+    description: ' Стильный дизайн позволяет холодильнику легко вписаться в интерьер кухни.',
     price: 539,
-    url: '/static/images/breadMaker3.jpg'
+    url: '/static/images/fridge.jpg',
+    count: 1
   },
   {
-    name: 'Samsung Pro GTR RX-15',
+    name: 'Toshiba TW-BJ11',
     id: '4',
-    description: 'очень классная хлебопечка',
-    price: 149,
-    url: '/static/images/breadMaker4.jpg'
+    description: 'Японский производитель подтверждает долговечность мотора гарантией на 10 лет.',
+    price: 610,
+    url: '/static/images/washing-machine.jpg',
+    count: 1
   },
   {
-    name: 'Samsung Pro GTR RX-15',
+    name: 'Xiaomi Mi Desktop Monitor',
     id: '5',
-    description: 'очень классная хлебопечка',
+    description: ' Защита от синего спектра позволит длительное время работать без усталости',
     price: 1119,
-    url: '/static/images/breadMaker5.jpg'
+    url: '/static/images/monitor.jpg',
+    count: 1
   },
   {
-    name: 'Mega Pro GTR RX-15',
+    name: 'DDPAI X2S PRO',
     id: '6',
-    description: 'очень классная хлебопечка',
-    price: 149,
-    url: '/static/images/breadMaker6.jpg'
+    description: 'Объектив с уникальной шестислойной стеклянной линзой, апертурой F1.8 и углом обзора 140°',
+    price: 339,
+    url: '/static/images/tolik.jpg',
+    count: 1
+  },
+  {
+    name: 'Scishare Capsule Coffee',
+    id: '7',
+    description: 'Капсульная кофемашина Scishare Capsule Coffee Machine mini станет настоящим украшением вашей кухни.',
+    price: 479,
+    url: '/static/images/cofeeMaker.jpg',
+    count: 1
+  },
+  {
+    name: 'Bosch BGS05A225',
+    id: '8',
+    description: ' Компактный, быстрый и экологический, без мешка.',
+    price: 228,
+    url: '/static/images/vacuum-cleaner.jpg',
+    count: 1
+  },
+  {
+    name: 'Samsung MG23T',
+    id: '9',
+    description:
+      'Панель из стекла идеально сочетается со стеклянной дверцей, это придает микроволновке стильный элегантный вид.',
+    price: 299,
+    url: '/static/images/microwave.jpg',
+    count: 1
   }
 ];

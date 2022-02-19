@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
   z-index: 9999;
 
-  background: radial-gradient(50% 70%, #c1ed96, #131314);
+  background: radial-gradient(50% 70%, #bd7dc5, #96d1ed);
   border-bottom: 1px solid ${({ theme }) => theme.colors.white};
 `;
 
@@ -29,6 +29,12 @@ export const LWrapper = styled.div`
     display: block;
     max-height: 50px;
   }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 46px;
+    font-style: oblique;
+  }
 
   ${({ theme }) => theme.templates.centerItems};
 `;
@@ -40,4 +46,17 @@ export const RWrapper = styled.div`
   ${({ theme }) => theme.templates.centerItems};
 `;
 
-export const NameWrapper = styled.div``;
+export const CWrapper = styled.div`
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+`;
+
+export const Counter = styled.div`
+  position: fixed;
+  background-color: #00adff;
+  width: 20px;
+  border-radius: 100%;
+  height: 20px;
+  text-align: center;
+`;

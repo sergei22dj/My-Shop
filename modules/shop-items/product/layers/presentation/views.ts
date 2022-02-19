@@ -31,6 +31,9 @@ export const ProductImg = styled.img`
 
 export const ProductDetailsContainer = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ProductName = styled.h2`
@@ -42,8 +45,8 @@ export const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
   background-color: #363837;
+  width: 50%;
 `;
 
 export const ProductBackButton = styled.div`
@@ -51,13 +54,13 @@ export const ProductBackButton = styled.div`
   opacity: 0.2;
   display: flex;
   align-items: center;
-  height: 10rem;
-  width: 33%;
+  height: 200px;
+  width: 25%;
   transition: 0.8s;
   border-radius: 50% 0 0 50%;
   cursor: pointer;
   &:hover {
-    opacity: 1;
+    opacity: 0.5;
     background-color: #ffffff24;
   }
 `;

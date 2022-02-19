@@ -1,3 +1,5 @@
+import { Product } from '@md-modules/shared/mock';
+import { ProductsAPIContext } from '@md-modules/shop-items/products/layers/api/products';
 import * as React from 'react';
 import { ProductAPIContext } from '../api/product';
 
@@ -9,17 +11,38 @@ interface ProductInfo {
 interface Context {
   productInfo: ProductInfo[];
   productImgUrl: string[];
+  productsList: Product[];
 }
 
 const ProductBLContext = React.createContext<Context>({
   productInfo: [],
-  productImgUrl: []
+  productImgUrl: [],
+  productsList: []
 });
 
 const ProductBLContextProvider: React.FC = ({ children }) => {
   // add business logic here
   const { product } = React.useContext(ProductAPIContext);
+  const { products } = React.useContext(ProductsAPIContext);
 
+  const productsList = React.useMemo<Product[]>(
+    () => {
+      if (!products) {
+        return [];
+      }
+
+      return products.map(({ description, name, url, price, id, count }) => ({
+        name,
+        url,
+        description,
+        price,
+        id,
+        count
+      }));
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [typeof products === 'undefined']
+  );
   const productImgUrl = React.useMemo<string[]>(() => {
     if (!product) {
       return [];
@@ -48,7 +71,8 @@ const ProductBLContextProvider: React.FC = ({ children }) => {
     <ProductBLContext.Provider
       value={{
         productInfo,
-        productImgUrl
+        productImgUrl,
+        productsList
       }}
     >
       {children}

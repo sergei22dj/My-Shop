@@ -1,12 +1,11 @@
 import * as React from 'react';
+
 // components
 import Link from 'next/link';
 
 const Logo = () => (
   <Link href='/' passHref>
-    <a>
-      <img src='/static/logos/logo.png' width='70px' height='70px' alt='dollar-logo' />
-    </a>
+    <a>My Shop</a>
   </Link>
 );
 
@@ -18,4 +17,12 @@ const BackImg = () => (
   </Link>
 );
 
-export { Logo, BackImg };
+const CartImg = () => {
+  return (
+    <>
+      <img src='/static/logos/cart.png' width='70px' height='70px' />
+    </>
+  );
+};
+
+export { Logo, BackImg, CartImg };

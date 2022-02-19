@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const InfoWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: ${({ theme }) => theme.colors.white};
-  padding: 7px 0;
+  padding: 14px 0;
+  width: 100%;
 `;
 
 export const InfoName = styled.div`

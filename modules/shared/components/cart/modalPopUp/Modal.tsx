@@ -5,8 +5,9 @@ import styled from 'styled-components';
 interface ModalProps {
   onBackdropClick: () => void;
 }
+
 const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7);
   position: fixed;
   height: 100%;
   width: 100%;
@@ -16,12 +17,13 @@ const Overlay = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const Modal: React.FC<ModalProps> = ({ onBackdropClick, children }) => {
-  return ReactDOM.createPortal(
+
+const Modal: React.FC<ModalProps> = ({ onBackdropClick, children }) =>
+  ReactDOM.createPortal(
     <Overlay onClick={onBackdropClick}>
       <div onClick={(e) => e.stopPropagation()}>{children}</div>
     </Overlay>,
     document.getElementById('modal-root')!
   );
-};
+
 export default Modal;

@@ -42,27 +42,41 @@ export const CardFooterTitle = styled.h5`
 `;
 
 export const ViewButton = styled.button`
-  padding: 5px 10px;
-  background-color: transparent;
-  border-radius: 3px;
-  border: 1px solid ${({ theme }) => theme.colors.green200};
-  color: #fff;
-  outline: none;
-  transition: background-color 0.2s linear;
-  cursor: pointer;
+   {
+    padding: 5px 10px;
+    background-color: black;
+    background-image: linear-gradient(#96d1ed, #bd7dc5);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    background-position-x: center;
+    border-radius: 22px;
+    border: 1px solid #131314;
+    color: #fff;
+    outline: none;
+    -webkit-transition: background-size 300ms;
+    transition: background-size 300ms;
+    cursor: pointer;
+  }
 
   &:hover {
-    background-color: rgba(135, 204, 67, 0.8);
+    background-size: 100% 100%;
+    color: black;
+    box-shadow: inset 0 0 1px black;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 15px black;
   }
 `;
 
 export const CardName = styled.p`
+  margin: 0;
   color: black;
   font-family: inherit;
   text-align: center;
   font-size: 25px;
   border: 1 px solid white;
-  background-color: ${({ theme }) => theme.colors.green100};
+  background-color: #96d1ed;
   border-radius: 15 px;
-  box-shadow: inset 0 0 8px white;
+  box-shadow: inset 0 0 10px black;
 `;
