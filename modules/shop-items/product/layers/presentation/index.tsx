@@ -27,9 +27,9 @@ const ProductPresentation = () => {
   const { productInfo, productImgUrl } = React.useContext(ProductBLContext);
   const { setCardProduct, productList, setCardProducts } = React.useContext(CardContext);
 
-  const idS = productList.map((el) => el.id);
-
   const addToCart = () => {
+    const idS = productList.map((el) => el.id);
+
     if (!idS.includes(product!.id)) {
       setCardProduct(product!);
     } else {
