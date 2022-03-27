@@ -16,7 +16,8 @@ export const colors = {
   gray800: '#4e4e4e',
   gray1000: '#131314',
   // other
-  white: '#fff'
+  white: '#fff',
+  black: '#000000'
 };
 
 export const templates = {

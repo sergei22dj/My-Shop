@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const DesktopModalContainer = styled.div`
-  font-size: 48px;
+  font-size: 36px;
   background-color: black;
   text-align: center;
-  border-radius: 50px 0 0 50px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   overflow: overlay;
   height: 70vh;
   box-shadow: 0px 0px 42px 16px rgba(0, 0, 0, 0.4);
@@ -13,104 +13,63 @@ export const DesktopModalContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-export const DesktopModalEmptyContainer = styled.div`
-  width: 500px;
-  color: white;
-  font-size: 48px;
-  height: 300px;
-  border-radius: 50px;
-  background-color: black;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 export const HeaderModal = styled.div`
   color: white;
   margin: 0;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   border-bottom: 1px solid white;
-  position: fixed;
+  height: 50px;
   background-color: #7cb5b7;
-  border-radius: 40px 0 0 0;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 10px;
+  font-size: 46px;
+  padding-left: 10px;
 `;
 
 export const ButtonBar = styled.div`
   background-color: #7cb5b7;
-  position: fixed;
   bottom: 15vh;
-  width: 500px;
-  border-radius: 0 0 0 50px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0 0 30px 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ProductsList = styled.div`
   display: flex;
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px white;
-  border: 1px solid white;
-`;
-
-export const Img = styled.img`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-`;
-
-export const Name = styled.p`
-  color: white;
-  font-size: 24px;
-`;
-
-export const Description = styled.p`
-  color: white;
-  font-size: 16px;
-`;
-
-export const NameWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-`;
-
 export const ProductsWrapper = styled.div`
-  margin: 60px 0;
   color: ${({ theme }) => theme.colors.white};
-`;
-
-export const ButtonsCard = styled.div`
-  font-size: 24px;
-  color: white;
-  display: flex;
-  font-size: 24px;
-  color: white;
-  align-items: center;
-  justify-content: space-evenly;
 `;
 
 export const ActionButton = styled.button`
   margin: 20px;
+  padding: 10px;
   font-size: 24px;
   background-color: #feffff;
-  border: none;
-  height: 40px;
-  border-radius: 15px;
+  border-radius: 35px;
+  box-shadow: inset 0 0 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  width: 100%;
+
+  &:active{
+    box-shadow: inset 0 0 20px;
+  }
 `;
 
-export const CLOSE_BUTTON_SIZE = 40;
-
 const CloseButton = styled.div`
-  position: absolute;
-  width: ${CLOSE_BUTTON_SIZE}px;
-  height: ${CLOSE_BUTTON_SIZE}px;
-  background-color: #c8c8c8;
+  width: 40px;
+  height: 40px;
+  background-color: ${({theme}) => theme.colors.lightGray};
   border-radius: 50%;
   cursor: pointer;
 
@@ -124,8 +83,6 @@ const CloseButton = styled.div`
 `;
 
 export const CloseDesktop = styled(CloseButton)`
-  top: -${CLOSE_BUTTON_SIZE / 2}px;
-  left: calc(100% - ${CLOSE_BUTTON_SIZE / 2}px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,9 +90,16 @@ export const CloseDesktop = styled(CloseButton)`
 
 export const CloseSign = styled.div`
   font-size: 24px;
-  color: black;
+  color: ${({theme}) => theme.colors.black};
 
   &:hover {
-    color: white;
+    color: ${({theme}) => theme.colors.white};
   }
 `;
+
+export const Empty = styled.div`
+width: 100%;
+padding: 0 60px;
+margin: auto auto;
+color: ${({theme}) => theme.colors.white}
+`

@@ -15,7 +15,9 @@ const Overlay = styled.div`
   left: 0;
   display: flex;
   align-items: center;
+  padding: 0 15px;
   justify-content: center;
+  z-index: 9999999;
 `;
 
 const Modal: React.FC<ModalProps> = ({ onBackdropClick, children }) =>

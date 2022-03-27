@@ -41,7 +41,7 @@ export const products: Product[] = [
     count: 1
   },
   {
-    name: 'Xiaomi Mi Desktop Monitor',
+    name: 'Xiaomi Mi Desktop',
     id: '5',
     description: ' Защита от синего спектра позволит длительное время работать без усталости',
     price: 1119,
