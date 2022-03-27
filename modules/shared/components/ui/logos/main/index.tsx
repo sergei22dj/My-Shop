@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Logo = () => (
   <Link href='/' passHref>
-    <a>My Shop</a>
+    <a>Shop</a>
   </Link>
 );
 
