@@ -5,7 +5,7 @@ import { useQuery } from '@md-utils/mock/query';
 import { Product, products } from '@md-modules/shared/mock';
 
 interface Context {
-  products: Product[] | undefined;
+  products?: Product[];
   isLoading: boolean;
 }
 
