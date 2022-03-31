@@ -48,7 +48,7 @@ export const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #363837;
+  background-color: ${({theme}) => theme.colors.darkGray};
   width: 50%;
   border-radius: 20px;
   @media (max-width: 640px){
@@ -58,8 +58,8 @@ export const ProductInfoContainer = styled.div`
 `;
 
 export const ProductBackButton = styled.div`
-  background-color: #ffffff00;
-  opacity: 0.2;
+  background-color: ${({theme}) => theme.colors.white};
+  opacity: 0.1;
   display: flex;
   align-items: center;
   height: 200px;
@@ -68,8 +68,8 @@ export const ProductBackButton = styled.div`
   border-radius: 50% 0 0 50%;
   cursor: pointer;
   &:hover {
-    opacity: 0.5;
-    background-color: #ffffff24;
+    opacity: 0.3;
+    background-color: ${({theme}) => theme.colors.white};
   }
   @media (max-width: 640px){
     display: none;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DesktopModalContainer = styled.div`
   font-size: 36px;
-  background-color: black;
+  background-color: ${({theme}) => theme.colors.black};
   text-align: center;
   width: 100%;
   max-width: 500px;
@@ -15,24 +15,23 @@ export const DesktopModalContainer = styled.div`
 `;
 
 export const HeaderModal = styled.div`
-  color: white;
+  color: ${({theme}) => theme.colors.white};
   margin: 0;
   width: 100%;
   max-width: 500px;
   border-bottom: 1px solid white;
   height: 50px;
-  background-color: #7cb5b7;
+  background-color: ${({theme}) => theme.colors.turquoise};
   border-radius: 30px 30px 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding-left: 10px;
   font-size: 46px;
-  padding-left: 10px;
 `;
 
 export const ButtonBar = styled.div`
-  background-color: #7cb5b7;
+  background-color: ${({theme}) => theme.colors.turquoise};
   bottom: 15vh;
   width: 100%;
   max-width: 500px;
@@ -78,7 +77,7 @@ const CloseButton = styled.div`
   }
 
   &:hover {
-    color: white;
+    color: ${({theme}) => theme.colors.white};
   }
 `;
 

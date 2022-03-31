@@ -44,14 +44,14 @@ export const CardFooterTitle = styled.h5`
 export const ViewButton = styled.button`
    {
     padding: 5px 10px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.black};
     background-image: linear-gradient(#96d1ed, #bd7dc5);
     background-repeat: no-repeat;
     background-size: 0 100%;
     background-position-x: center;
     border-radius: 22px;
     border: 1px solid #131314;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     outline: none;
     -webkit-transition: background-size 300ms;
     transition: background-size 300ms;
@@ -60,7 +60,7 @@ export const ViewButton = styled.button`
 
   &:hover {
     background-size: 100% 100%;
-    color: black;
+    color: ${({ theme }) => theme.colors.black};
     box-shadow: inset 0 0 1px black;
   }
 
@@ -71,12 +71,12 @@ export const ViewButton = styled.button`
 
 export const CardName = styled.p`
   margin: 0;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   font-family: inherit;
   text-align: center;
   font-size: 25px;
   border: 1 px solid white;
-  background-color: #96d1ed;
+  background-color: ${({ theme }) => theme.colors.LightBlue};
   border-radius: 15 px;
   box-shadow: inset 0 0 10px black;
 `;

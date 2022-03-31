@@ -1,14 +1,14 @@
 import React from 'react';
 
 // context
-import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
+import { CardContext } from '@md-modules/shared/components/cart-context';
 
 // assist
-import { numberWithCommas } from '../../assistants';
+import { numberWithCommas } from '../assistants';
 
 // components
-import Modal from '../../modal';
-import { ProductCard } from '../../product-card';
+import Modal from './modal';
+import { ProductCard } from './product-card';
 
 // views
 import {
@@ -61,8 +61,7 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ onBackdropClick, modalVsion
               count={el.count}
               incrementItem={incrementItem}
               decrementItem={decrementItem}
-              description={el.description}
-            />
+              description={el.description}            />
           ))}</ProductsWrapper>
         </DesktopModalContainer>
         <ButtonBar>

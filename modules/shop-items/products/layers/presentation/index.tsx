@@ -16,7 +16,7 @@ const ProductsPresentation = () => {
     <Wrapper>
       <ContentLoader isLoading={isLoading}>
         {productsList.map((product) => (
-          <Card {...product} key={product.id} />
+          <Card product={product} key={product.id} />
         ))}
       </ContentLoader>
     </Wrapper>

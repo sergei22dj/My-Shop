@@ -2,6 +2,7 @@ import { DefaultTheme, css } from 'styled-components';
 
 export const colors = {
   // blue
+  blue: '#00adff',
   blue400: '#0070f3',
   // green
   green300: '#2ab736',
@@ -16,8 +17,11 @@ export const colors = {
   gray800: '#4e4e4e',
   gray1000: '#131314',
   // other
+  turquoise: '#7cb5b7',
   white: '#fff',
-  black: '#000000'
+  black: '#000000',
+  purple: '#bd7dc5',
+  LightBlue: '#96d1ed'
 };
 
 export const templates = {

@@ -17,12 +17,12 @@ export const Img = styled.img`
 `;
 
 export const Name = styled.p`
-  color: white;
+  color: ${({theme}) => theme.colors.white};
   font-size: 24px;
 `;
 
 export const Description = styled.p`
-  color: white;
+  color: ${({theme}) => theme.colors.white};
   font-size: 16px;
 `;
 
@@ -34,10 +34,9 @@ export const NameWrapper = styled.div`
 
 export const ButtonsCard = styled.div`
   font-size: 24px;
-  color: white;
+  color:  ${({theme}) => theme.colors.white};
   display: flex;
   font-size: 24px;
-  color: white;
   align-items: center;
   justify-content: space-evenly;
 `;

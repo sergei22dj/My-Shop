@@ -4,7 +4,7 @@ import { Product } from '@md-modules/shared/mock';
 import { ViewButton } from '@md-modules/shop-items/products/compoonents/card/views';
 import { ButtonsCard, Description, Img, Name, NameWrapper, Wrapper } from './views';
 // helpers
-import { numberWithCommas } from '../assistants';
+import { numberWithCommas } from '../../assistants';
 
 interface Props extends Product {
     incrementItem: (id: string) => void;

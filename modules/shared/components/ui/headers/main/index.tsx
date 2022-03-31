@@ -1,6 +1,6 @@
 import * as React from 'react';
 // useContext
-import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
+import { CardContext } from '@md-modules/shared/components/cart-context';
 // view components
 import { MenuItem } from '@md-ui/menu-items/main';
 import { CartImg, Logo } from '@md-ui/logos/main';
@@ -9,7 +9,7 @@ import { menuItems } from './constants';
 // views
 import { Wrapper, IWrapper, LWrapper, RWrapper, CWrapper, Counter } from './views';
 
-import ModalWrapper from '@md-modules/shared/components/cart/layouts/presentation';
+import ModalWrapper from '@md-modules/shared/components/cart';
 
 const Header = () => {
   const { productList } = React.useContext(CardContext);

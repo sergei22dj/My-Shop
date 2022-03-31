@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
   z-index: 9999;
 
-  background: radial-gradient(50% 70%, #bd7dc5, #96d1ed);
+  background: radial-gradient(50% 70%, ${({theme}) => theme.colors.purple}, ${({theme}) => theme.colors.LightBlue});
   border-bottom: 1px solid ${({ theme }) => theme.colors.white};
 `;
 
@@ -31,7 +31,7 @@ export const LWrapper = styled.div`
     max-height: 50px;
   }
   a {
-    color: white;
+    color: ${({theme}) => theme.colors.white};
     text-decoration: none;
     font-size: 46px;
     font-style: oblique;
@@ -48,14 +48,14 @@ export const RWrapper = styled.div`
 `;
 
 export const CWrapper = styled.div`
-  background-color: white;
+  background-color: ${({theme}) => theme.colors.white};
   border-radius: 15px;
   cursor: pointer;
 `;
 
 export const Counter = styled.div`
   position: fixed;
-  background-color: #00adff;
+  background-color: ${({theme}) => theme.colors.blue};
   width: 20px;
   border-radius: 100%;
   height: 20px;

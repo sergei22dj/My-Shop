@@ -1,44 +1,34 @@
 import * as React from 'react';
 // context
-import { CardContext } from '@md-modules/shared/components/cart/layouts/bussines';
+import { CardContext } from '@md-modules/shared/components/cart-context';
 // views
 import { CardWrapper, CardImgWrapper, CardImg, CardFooter, CardFooterTitle, ViewButton, CardName } from './views';
 // view components
 import { ProductLink } from '../product-link';
+import { Product } from '@md-modules/shared/mock';
 
 interface Props {
-  id: string;
-  name: string;
-  url: string;
-  price: number;
-  count: number;
-  description: string;
+  product: Product;
+ 
 }
 
-const Card: React.FC<Props> = ({ id, name, url, price, description, count }) => {
-  const { setCardProduct, productList, setCardProducts } = React.useContext(CardContext);
+const Card: React.FC<Props> = ({ product }) => {
+  const { addToCart } = React.useContext(CardContext);
 
-  const idS = productList.map((el) => el.id);
+  const addProductToCart = () => addToCart(product);
 
-  const addToCart = () => {
-    if (!idS.includes(id)) {
-      setCardProduct({ name, url, price, id, description, count });
-    } else {
-      setCardProducts(productList.map((item) => (item.id === id ? { ...item, count: item.count + 1 } : item)));
-    }
-  };
   return (
-    <CardWrapper key={id}>
-      <CardName>{name} </CardName>
+    <CardWrapper key={product.id}>
+      <CardName>{product.name} </CardName>
       <CardImgWrapper>
-        <CardImg src={url} alt={`${name}-${id}`} />
+        <CardImg src={product.url} alt={`${product.name}-${product.id}`} />
       </CardImgWrapper>
       <CardFooter>
-        <ProductLink pId={id}>
+        <ProductLink pId={product.id}>
           <ViewButton>Details</ViewButton>
         </ProductLink>
-        <CardFooterTitle>{price} $</CardFooterTitle>
-        <ViewButton onClick={addToCart}>Add to cart</ViewButton>
+        <CardFooterTitle>{product.price} $</CardFooterTitle>
+        <ViewButton onClick={addProductToCart}>Add to cart</ViewButton>
       </CardFooter>
     </CardWrapper>
   );
